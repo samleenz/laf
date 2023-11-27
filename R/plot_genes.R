@@ -19,7 +19,7 @@
 #' }
 #'
 #' @importFrom scater logNormCounts plotExpression
-#' @importFrom SummarizedExperiment
+#' @importFrom SummarizedExperiment SummarizedExperiment
 #' @import ggplot2
 #' @import dplyr
 #' @import tidyr

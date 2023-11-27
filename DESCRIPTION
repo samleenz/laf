@@ -10,10 +10,24 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
+    BiocSingular,
+    checkmate,
     circlize,
     ComplexHeatmap,
+    dplyr,
     edgeR,
+    forcats,
+    ggplot2,
+    ggpubr,
+    glue,
     ncla,
+    patchwork,
+    purrr,
+    restools,
+    rlang,
     scales,
+    scater,
     SummarizedExperiment,
+    tibble,
+    tidyr,
     viridis

@@ -20,7 +20,7 @@
 #' @importFrom ggpubr theme_pubr
 #' @importFrom dplyr bind_rows left_join mutate arrange
 #' @importFrom tidyr pivot_wider
-#' @importFrom stats cor round
+#' @importFrom stats cor
 #' @importFrom rlang sym
 #' @importFrom forcats fct_relevel
 #' @importFrom glue glue

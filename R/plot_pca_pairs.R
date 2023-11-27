@@ -28,7 +28,7 @@
 #' @import dplyr
 #' @import checkmate
 #' @import rlang
-#' @import bsparam from BiocSingular
+#' @import BiocSingular
 #'
 #' @export
 plot_pca_pairs <- function(
