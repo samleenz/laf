@@ -22,10 +22,10 @@
 #' @importFrom SummarizedExperiment assay rownames colnames colData
 #'
 #' @examples
-#' # Example usage of diss_heatmap function
+#' # Example usage of plot_distance_heatmap function
 #' \dontrun{
 #' se <- ... # Create or load your SummarizedExperiment object
-#' diss_heatmap(se)
+#' plot_distance_heatmap(se)
 #'
 #' annot_cols_list = list(
 #'   Tissue = pal_tissue[unique(se_f$Tissue)],
@@ -36,7 +36,7 @@
 #' }
 #'
 #' @export
-diss_heatmap <- function(se,
+plot_distance_heatmap <- function(se,
                          features = rownames(se),
                          samples = colnames(se),
                          assay = "logcounts",
@@ -75,14 +75,16 @@ diss_heatmap <- function(se,
   )
 
   # each legend should be a single row
-  annot_legends <- list(rep(list(nrow = 1), length(annots)))
-  names(annot_legends) <- annots
+  annot_legends <- setNames(
+    lapply(annots, function(x) list(nrow = 1)),
+    annots
+    )
 
   # make annotations for columns
   annot <- ComplexHeatmap::HeatmapAnnotation(
     df = as.data.frame(
       # SummarizedExperiment::colData(se_f)[, c("Tissue", "Clone", "Mouse_ID", "Batch")]
-      SummarizedExperiment::colData(se_f)[, annots]
+      SummarizedExperiment::colData(se_f)[, annots, drop = F]
     ),
     col = annots_col_list,
     annotation_legend_param = annot_legends,
@@ -93,7 +95,7 @@ diss_heatmap <- function(se,
   # don't edit, just copy/paste above and change which = ... ! and show_legend
   row_annot <- ComplexHeatmap::HeatmapAnnotation(
     df = as.data.frame(
-      SummarizedExperiment::colData(se_f)[, annots]
+      SummarizedExperiment::colData(se_f)[, annots, drop = F]
     ),
     col = annots_col_list,
     annotation_legend_param = annot_legends,
