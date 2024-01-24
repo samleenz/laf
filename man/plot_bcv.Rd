@@ -19,8 +19,8 @@ plot_bcv(y, logCPM_cutoff = 2, BCV_cutoff = 0.7, main_title = NULL)
 Plot BCV versus average log counts per million (log-CPM) for genes in DGEList object
 }
 \examples{
-library(edgeR)
-data(dgelist)
-plot_genes(dgelist)
+#library(edgeR)
+#data(dgelist)
+#plot_genes(dgelist)
 
 }

@@ -12,7 +12,6 @@
 #' @importFrom ggpubr theme_pubr
 #' @importFrom dplyr colSums rownames_to_column rename
 #'
-#'
 #' @export
 plot_libsize <- function(se, fill = NULL, scale_fill = NULL){
   mean_libSize <- assay(se, "counts") |>
@@ -25,7 +24,7 @@ plot_libsize <- function(se, fill = NULL, scale_fill = NULL){
       SummarizedExperiment::colData(se) |>
         as.data.frame()
     ) |>
-    dplyr::rownames_to_column(var = "Sample_ID") |>
+    tibble::rownames_to_column(var = "Sample_ID") |>
     dplyr::rename("LibrarySize" = 'colSums(assay(se, "counts"))') |>
     ggplot(
       aes(
