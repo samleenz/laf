@@ -8,9 +8,9 @@
 #' @importFrom edgeR plotBCV
 #'
 #' @examples
-#' library(edgeR)
-#' data(dgelist)
-#' plot_genes(dgelist)
+#' #library(edgeR)
+#' #data(dgelist)
+#' #plot_genes(dgelist)
 #'
 #' @export
 plot_bcv <- function(y, logCPM_cutoff = 2, BCV_cutoff = 0.7, main_title = NULL) {
