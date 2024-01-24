@@ -20,8 +20,8 @@ DGEGLM object.
 }
 \examples{
 # Example usage:
-res <- ... # edgeR DGEGLM object
-genesets <- list(h = laf::msigdb_h, c2 = laf::msigdb_c2)
-gsea_res <- gsea_gene_score(res, genesets)
+# res <- ... # edgeR DGEGLM object
+# genesets <- list(h = laf::msigdb_h, c2 = laf::msigdb_c2)
+# gsea_res <- gsea_gene_score(res, genesets)
 
 }
