@@ -22,10 +22,10 @@ plot_libsize <- function(se, fill = NULL, scale_fill = NULL){
   assay(se, "counts") |>
     colSums() |>
     cbind(
-      colData(se) |>
+      SummarizedExperiment::colData(se) |>
         as.data.frame()
     ) |>
-    rownames_to_column(var = "Sample_ID") |>
+    dplyr::rownames_to_column(var = "Sample_ID") |>
     dplyr::rename("LibrarySize" = 'colSums(assay(se, "counts"))') |>
     ggplot(
       aes(
