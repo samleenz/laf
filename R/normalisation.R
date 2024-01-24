@@ -7,10 +7,6 @@
 #' @return A numeric vector of TMM-normalized effective library sizes.
 #' @export
 #'
-#' @examples
-#' # Example usage:
-#' se <- ... # provide a SummarizedExperiment object
-#' eff_libsize(se)
 #'
 #' @import edgeR
 #' @keywords internal
