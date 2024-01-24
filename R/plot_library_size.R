@@ -1,3 +1,19 @@
+#' Plot library size with optional fill color
+#'
+#' Generate a bar plot of library sizes with an optional fill color.
+#'
+#' @param se SummarizedExperiment object.
+#' @param fill Variable used for fill color in the plot. If NULL, no fill color is applied.
+#' @param scale_fill A function to customize the fill color scale (optional).
+#'
+#' @return A ggplot object displaying library sizes.
+#'
+#' @importFrom ggplot2 aes geom_hline geom_col theme element_text labs
+#' @importFrom ggpubr theme_pubr
+#' @importFrom dplyr colSums rownames_to_column rename
+#'
+#'
+#' @export
 plot_libsize <- function(se, fill = NULL, scale_fill = NULL){
   mean_libSize <- assay(se, "counts") |>
     colSums() |>
