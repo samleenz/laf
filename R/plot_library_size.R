@@ -8,10 +8,6 @@
 #'
 #' @return A ggplot object displaying library sizes.
 #'
-#' @importFrom ggplot2 aes geom_hline geom_col theme element_text labs
-#' @importFrom ggpubr theme_pubr
-#' @importFrom dplyr colSums rownames_to_column rename
-#'
 #' @export
 plot_libsize <- function(se, fill = NULL, scale_fill = NULL){
   mean_libSize <- assay(se, "counts") |>

@@ -5,8 +5,6 @@
 #' @param BCV_cutoff A numeric value specifying the minimum biological coefficient of variation required for a gene to be plotted.
 #' @param main A character string for the plot title. (defaults to BCV value)
 #'
-#' @importFrom edgeR plotBCV
-#'
 #' @examples
 #' #library(edgeR)
 #' #data(dgelist)
