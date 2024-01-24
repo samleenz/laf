@@ -16,8 +16,8 @@ fill_tissue <- scale_fill_manual(values = pal_tissue)
 
 
 pal_mouse <- setNames(
-  brewer.pal(4, "Set1"),
-  c("Ms941", "Ms1097", "Ms1098", "Ms1100")
+  brewer.pal(7, "Set1"),
+  c("Ms941", "Ms1097", "Ms1098", "Ms1100", "Ms1295", "Ms1297", "Ms1300")
 )
 colour_mouse <- scale_colour_manual(values = pal_mouse)
 fill_mouse <- scale_fill_manual(values = pal_mouse)
