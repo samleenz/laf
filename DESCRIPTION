@@ -28,6 +28,7 @@ Imports:
     rlang,
     scales,
     scater,
+    singscore,
     SummarizedExperiment,
     tibble,
     tidyr,
