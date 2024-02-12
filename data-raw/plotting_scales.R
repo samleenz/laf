@@ -40,6 +40,9 @@ fill_batch <- scale_fill_manual(values = pal_batch[-2])
 updn_cols_dark <-  c(brewer.pal(6, 'Greens')[4], brewer.pal(6, 'Purples')[4]) # pinched from dhamresh :-)
 tble_cols = c(brewer.pal(6, 'Greens')[2], brewer.pal(6, 'Purples')[2]) # 2023-08-11, for the signif results in DataTables
 
+pal_all <- c(pal_tissue, pal_mouse, pal_clone, pal_batch[-2])
+colour_all <- scale_colour_manual(values = pal_all)
+fill_all <- scale_fill_manual(values = pal_all)
 
 plotting_scales <- list(
   colour_tissue = colour_tissue,
@@ -50,6 +53,9 @@ plotting_scales <- list(
   fill_clone = fill_clone,
   colour_batch = colour_batch,
   fill_batch = fill_batch,
+  colour_all = colour_all,
+  fill_all = fill_all,
+  pal_all = pal_all,
   updn_cols_dark = updn_cols_dark,
   tble_cols = tble_cols
 )
