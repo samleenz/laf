@@ -51,8 +51,10 @@ plot_lfc <- function(df1,
     dplyr::mutate(signif = forcats::fct_relevel(as.factor(signif), "0")) |>
     dplyr::arrange(signif) |>
     ggplot2::ggplot(ggplot2::aes(!!sym(lb1), !!sym(lb2))) +
-    ggplot2::geom_abline(slope = 1, intercept = 1, colour = "red", linetype = "dashed") +
-    ggplot2::geom_smooth(method = "lm", formula = y ~ x) +
+    ggplot2::geom_vline(xintercept = 0, colour = "grey", linetype = "dashed") +
+    ggplot2::geom_hline(yintercept = 0, colour = "grey", linetype = "dashed") +
+    ggplot2::geom_abline(slope = 1, intercept = 0, colour = "red", linetype = "dashed") +
+    # ggplot2::geom_smooth(method = "lm", formula = y ~ x) +
     ggplot2::geom_point(aes(colour = as.character(signif)), shape = 16, alpha = 0.8) +
     ggplot2::scale_colour_manual(name = glue::glue("{lb1} significance"), values = c(`1` = "#74C476", `0` = "black", `-1` = "#9E9AC8")) +
     ggpubr::theme_pubr(border = TRUE) +
