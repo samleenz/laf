@@ -17,6 +17,7 @@ plot_coldata_alluvial <- function(se, vars){
     dplyr::select(1) |>
     table() |>
     unname() |>
+    rev() |>
     cumsum()
 
   se |>
