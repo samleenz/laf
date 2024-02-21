@@ -1,6 +1,6 @@
 Package: laf
 Title: Analysis functions for the RNA-seq analysis of LeGo barcoded clones
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Samuel", "Lee", , "samleenz@me.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
