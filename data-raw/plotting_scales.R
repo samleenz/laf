@@ -6,8 +6,8 @@ library(RColorBrewer)
 library(ggplot2)
 
 pal_tissue <- setNames(
-  brewer.pal(5, "Set2"),
-  c("Bone", "Brain", "Liver", "Lungs", "Tumour")
+  brewer.pal(6, "Set2"),
+  c("Bone", "Brain", "Liver", "Lungs", "Tumour", "LymphNode")
 )
 colour_tissue <- scale_colour_manual(values = pal_tissue)
 fill_tissue <- scale_fill_manual(values = pal_tissue)
@@ -23,16 +23,16 @@ colour_mouse <- scale_colour_manual(values = pal_mouse)
 fill_mouse <- scale_fill_manual(values = pal_mouse)
 
 pal_clone <- setNames(
-  scico::scico(4, palette = "tokyo"),
-  c("12", "2",  "4",  "1")
+  scico::scico(6, palette = "tokyo", categorical = TRUE),
+  c("12", "2",  "4",  "1", "16", "6")
 )
 colour_clone <- scale_colour_manual(values = pal_clone)
 fill_clone <- scale_fill_manual(values = pal_clone)
 
 pal_batch <- setNames(
   # brewer.pal(3, "Paired"),
-  scico::scico(3, palette = "roma"),
-  c("B1", NA, "B2")
+  scico::scico(4, palette = "navia", categorical = TRUE),
+  c("B1", "B2", "B3", "B4")
 )
 colour_batch <- scale_colour_manual(values = pal_batch[-2])
 fill_batch <- scale_fill_manual(values = pal_batch[-2])
