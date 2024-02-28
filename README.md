@@ -15,7 +15,7 @@ You can install the development version of laf from [GitHub](https://github.com/
 devtools::install_github("samleenz/laf")
 ```
 
-This does not work atm as it has a dependency on another private package of mine :(
+~~This does not work atm as it has a dependency on another private package of mine :(~~
 
 
 
