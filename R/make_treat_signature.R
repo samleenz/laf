@@ -18,7 +18,7 @@ make_treat_signature <- function(fit, contrast, name, lfc = 1, fdr = 0.05, out_d
 
   if(! dir.exists(out_dir)){
     message(glue::glue("Making {out_dir}"))
-    dir.create(out_dir, recursive = TRUE)
+    dir.create(here::here(out_dir), recursive = TRUE)
   }
 
   # do the glmTreat test and create formatted top table
