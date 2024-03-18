@@ -16,7 +16,7 @@
 make_treat_signature <- function(fit, contrast, name, lfc = 1, fdr = 0.05, out_dir = "results/genesets"){
 
 
-  if(! dir.exists(out_dir)){
+  if(! dir.exists(here::here(out_dir))){
     message(glue::glue("Making {out_dir}"))
     dir.create(here::here(out_dir), recursive = TRUE)
   }
