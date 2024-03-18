@@ -3,6 +3,7 @@
 export(eff_libsize)
 export(getLFC)
 export(gsea_gene_score)
+export(make_treat_signature)
 export(plot_bcv)
 export(plot_coldata_alluvial)
 export(plot_distance_heatmap)
