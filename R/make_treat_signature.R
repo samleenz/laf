@@ -15,9 +15,6 @@
 #'
 make_treat_signature <- function(fit, contrast, name, lfc = 1, fdr = 0.05, out_dir = "results/genesets"){
 
-  if(! direction %in% c("up", "down")){
-    stop("Direction must be 'up' or 'down'")
-  }
 
   if(! dir.exists(out_dir)){
     message(glue::glue("Making {out_dir}"))
