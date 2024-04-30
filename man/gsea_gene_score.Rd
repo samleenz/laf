@@ -16,7 +16,7 @@ A named list containing GSEA results for each gene set.
 }
 \description{
 Perform Gene Set Enrichment Analysis using gene scores derived from an edgeR
-DGEGLM object. \code{nproc} set to 1 within fgsea::fgsea
+DGEGLM object. \code{BPPARAM} set to \code{BiocParallel::SerialParam()} within fgsea::fgsea
 }
 \examples{
 # Example usage:

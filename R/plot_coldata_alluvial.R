@@ -11,8 +11,7 @@ plot_coldata_alluvial <- function(se, vars){
   # select the first variable and derive axis
   # breaks from this
   breaks <- se |>
-    SummarizedExperiment::colData() |>
-    as.data.frame() |>
+    cd_2_df() |>
     dplyr::select( {{ vars }}) |>
     dplyr::select(1) |>
     table() |>
@@ -21,8 +20,7 @@ plot_coldata_alluvial <- function(se, vars){
     cumsum()
 
   se |>
-    SummarizedExperiment::colData() |>
-    as.data.frame() |>
+    cd_2_df() |>
     dplyr::summarise(samples = n(), .by = {{ vars }}) |>
     ggalluvial::to_lodes_form({{ vars }} ) |>
     ggplot(
