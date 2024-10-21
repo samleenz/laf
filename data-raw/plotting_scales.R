@@ -27,8 +27,9 @@ colour_mouse <- scale_colour_manual(values = pal_mouse)
 fill_mouse <- scale_fill_manual(values = pal_mouse)
 
 pal_clone <- setNames(
-  scico::scico(6, palette = "tokyo", categorical = TRUE),
-  c("12", "2",  "4",  "1", "16", "6")
+  # scico::scico(6, palette = "tokyo", categorical = TRUE),
+  RColorBrewer::brewer.pal(8, "Accent"),
+  c("12", "2",  "4",  "1", "16", "6", "24", "26")
 )
 colour_clone <- scale_colour_manual(values = pal_clone)
 fill_clone <- scale_fill_manual(values = pal_clone)
