@@ -25,14 +25,15 @@
 #' }
 #'
 #' @import ccmap
+#' @import ccdata
 #' @importFrom purrr map list_cbind
 #' @importFrom tibble rownames_to_column
 #' @export
 get_cmap_correlations <- function(sig, B = 10000, ngenes = 200){
   # sig: named list of gene scores, where names are HGNC symbols
   # B: number of permutations for empirical p-value testing
-  require(ccmap)
-  data(cmap_es)
+  require(ccdata)
+  data("cmap_es", package = "ccdata")
 
   query <- ccmap::query_drugs(
     sig,
