@@ -3,6 +3,7 @@
 export(call_lego_clones)
 export(cd_2_df)
 export(eff_libsize)
+export(extract_lego_counts)
 export(getLFC)
 export(get_cmap_correlations)
 export(gsea_gene_score)
