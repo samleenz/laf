@@ -7,7 +7,7 @@
 extract_lego_counts <- function(sce, altexp = "Antibody Capture"){
   sce <- SingleCellExperiment::splitAltExps(
     sce,
-    rowData(sce)$Type
+    SummarizedExperiment::rowData(sce)$Type
   )
 
   # get the lego altExp
