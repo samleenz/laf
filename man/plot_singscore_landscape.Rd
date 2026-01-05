@@ -29,6 +29,9 @@ plot_singscore_landscape(
 
 \item{shape}{A colData name (bare) to set point shape by}
 }
+\value{
+a ggplot2 object
+}
 \description{
 Generate a singscore landscape plot
 }

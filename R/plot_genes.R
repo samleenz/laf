@@ -24,12 +24,8 @@
 #' )
 #' }
 #'
-#' @importFrom scater logNormCounts plotExpression
+#' @importFrom scater plotExpression
 #' @importFrom SummarizedExperiment SummarizedExperiment
-#' @import ggplot2
-#' @import dplyr
-#' @import tidyr
-#' @import rlang
 #'
 #' @export
 plot_expression <- function(se,

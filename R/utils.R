@@ -5,7 +5,6 @@
 #' @return dataframe
 #' @export
 #'
-#' @examples
 cd_2_df <- function(se){
   # take a summarised experiment object and return the colData as a data.frame
   # with the sample names in a column
@@ -29,7 +28,6 @@ cd_2_df <- function(se){
 #' @return se, with features in the hgnc gene_name space without duplicates
 #' @export
 #'
-#' @examples
 se_2_hgnc <- function(se){
   se <- se[!is.na(SummarizedExperiment::rowData(se)$gene_name), ]
 

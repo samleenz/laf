@@ -26,15 +26,10 @@
 #'
 #' @importFrom patchwork plot_spacer wrap_plots
 #' @importFrom restools plotPCA
-#'
-#' @import ggplot2
-#' @import purrr
-#' @import scales
-#' @import tidyr
-#' @import dplyr
-#' @import checkmate
-#' @import rlang
-#' @import BiocSingular
+#' @importFrom ggplot2 scale_color_discrete
+#' @importFrom purrr map map_lgl
+#' @importFrom rlang is_list enquo
+#' @importFrom BiocSingular bsparam
 #'
 #' @export
 plot_pca_pairs <- function(
@@ -58,7 +53,7 @@ plot_pca_pairs <- function(
   )
 
   # create a list of PCA plots
-  plots <- purrr:::map(
+  plots <- purrr::map(
     dimsList,
     function(x){
       restools::plotPCA(

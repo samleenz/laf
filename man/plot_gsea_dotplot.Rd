@@ -13,6 +13,9 @@ plot_gsea_dotplot(lst, column_order = names(lst), fdr = 0.1)
 
 \item{fdr}{FDR cutoff for significant pathways}
 }
+\value{
+a ggplot2 object
+}
 \description{
 Plot a GSEA dotplot for a set of different conditions
 }
