@@ -4,7 +4,7 @@
 #' @param column_order the x-axis order, should be names of
 #' @param fdr FDR cutoff for significant pathways
 #'
-#' @return
+#' @return a ggplot2 object
 #' @export
 #'
 plot_gsea_dotplot <- function(lst, column_order = names(lst), fdr = 0.1){

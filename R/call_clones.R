@@ -11,7 +11,6 @@
 #' @return a character vector of length `ncol(sce)` with clone assignments
 #' @export
 #'
-#' @examples
 call_lego_clones <- function(sce,
                              min_count = 1,
                              min_frac = 0.05,

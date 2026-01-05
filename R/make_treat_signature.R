@@ -10,7 +10,7 @@
 #' @param fdr hard FDR-pvalue cutoff for the gene sets
 #' @param out_dir directory to save the gene signatures in
 #'
-#' @return
+#' @return a list(?) of up and downregualted topTables
 #' @export
 #'
 make_treat_signature <- function(fit, contrast, name, lfc = 1, fdr = 0.05, out_dir = "results/genesets"){

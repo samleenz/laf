@@ -26,6 +26,9 @@ make_treat_signature(
 
 \item{out_dir}{directory to save the gene signatures in}
 }
+\value{
+a list(?) of up and downregualted topTables
+}
 \description{
 Create and save (to text file) gene signature of a specified contrast using
 \code{glmTreat}.

@@ -13,10 +13,9 @@
 #' that the gene symbols are in the gene_name slot of the SE object
 #'
 #'
-#' @return
+#' @return a ggplot2 object
 #' @export
 #'
-#' @examples
 plot_singscore_landscape <- function(se, gs_x, gs_y, name_x, name_y, colour = NULL, shape = NULL){
 
   # check for NAs and drop
