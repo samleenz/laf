@@ -5,6 +5,7 @@
 #'
 #' @return ggplot plot object
 #' @export
+#' @import ggplot2
 #'
 plot_coldata_alluvial <- function(se, vars){
 

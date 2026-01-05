@@ -14,8 +14,8 @@
 #'
 #' @return A heatmap visualizing dissimilarity values.
 #'
-#' @import ComplexHeatmap
-#' @import viridis
+#' @importFrom ComplexHeatmap Heatmap HeatmapAnnotation draw
+#' @importFrom viridis viridis
 #' @importFrom scales rescale
 #' @importFrom circlize colorRamp2
 #' @importFrom ncla dissim
