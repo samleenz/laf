@@ -28,7 +28,7 @@
 #' @importFrom restools plotPCA
 #'
 #' @import ggplot2
-#' @import purrr
+#' @importFrom purrr map
 #' @import scales
 #' @import tidyr
 #' @import dplyr
@@ -58,7 +58,7 @@ plot_pca_pairs <- function(
   )
 
   # create a list of PCA plots
-  plots <- purrr:::map(
+  plots <- purrr::map(
     dimsList,
     function(x){
       restools::plotPCA(
