@@ -15,7 +15,13 @@
 #' @examples
 #' \dontrun{
 #' # Example usage:
-#' plot_pca_pairs(se, assay = "RNA", dimsList = list(c(1,2), c(3,2), c(1,3)), colour = "Group", shape = "Condition")
+#' plot_pca_pairs(
+#'   se,
+#'   assay = "RNA",
+#'   dimsList = list(c(1,2), c(3,2), c(1,3)),
+#'   colour = "Group",
+#'   shape = "Condition"
+#' )
 #' }
 #'
 #' @importFrom patchwork plot_spacer wrap_plots

@@ -30,10 +30,15 @@
 #' @importFrom tibble rownames_to_column
 #' @export
 get_cmap_correlations <- function(sig, B = 10000, ngenes = 200){
+
+  if(! (rlang::is_installed("ccmap") | rlang::is_installed("ccdata"))){
+    stop("Install ccdata and or cmap for this analysis")
+  }
+
   # sig: named list of gene scores, where names are HGNC symbols
   # B: number of permutations for empirical p-value testing
+  # data("cmap_es", package = "ccdata")
   require(ccdata)
-  data("cmap_es", package = "ccdata")
 
   query <- ccmap::query_drugs(
     sig,

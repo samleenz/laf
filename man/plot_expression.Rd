@@ -29,7 +29,13 @@ A simple wrapper for scater::plotExpression to work on SE objects
 \examples{
 \dontrun{
 # Example usage:
-plot_expression(se, samples = c("Sample1", "Sample2"), genes = c("Gene1", "Gene2"), x = "Condition", colour = "Group")
+plot_expression(
+  se,
+  samples = c("Sample1", "Sample2"),
+  genes = c("Gene1", "Gene2"),
+  x = "Condition",
+  colour = "Group"
+)
 }
 
 }
