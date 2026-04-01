@@ -24,23 +24,48 @@
 #'   head(results)
 #' }
 #'
-#' @import ccmap
-#' @import ccdata
 #' @importFrom purrr map list_cbind
-#' @importFrom rlang is_installed
 #' @importFrom tibble rownames_to_column
 #' @export
 get_cmap_correlations <- function(sig, B = 10000, ngenes = 200){
-
-  if(! (rlang::is_installed("ccmap") | rlang::is_installed("ccdata"))){
-    stop("Install ccdata and or cmap for this analysis")
+  if (!rlang::is_installed("ccmap")) {
+    stop(
+      "Package `ccmap` is required for `get_cmap_correlations()`. ",
+      "Install it before running this analysis.",
+      call. = FALSE
+    )
   }
+
+  if (!rlang::is_installed("ccdata")) {
+    stop(
+      "Package `ccdata` is required for `get_cmap_correlations()`. ",
+      "Install it before running this analysis.",
+      call. = FALSE
+    )
+  }
+
+  if (!exists("query_drugs", envir = asNamespace("ccmap"), inherits = FALSE)) {
+    stop(
+      "Installed package `ccmap` does not provide `query_drugs()`. ",
+      "Install a compatible version of `ccmap`.",
+      call. = FALSE
+    )
+  }
+
+  cmap_data <- new.env(parent = emptyenv())
+  utils::data("cmap_es", package = "ccdata", envir = cmap_data)
+
+  if (!exists("cmap_es", envir = cmap_data, inherits = FALSE)) {
+    stop(
+      "Package `ccdata` is installed, but dataset `cmap_es` could not be loaded.",
+      call. = FALSE
+    )
+  }
+
+  cmap_es <- get("cmap_es", envir = cmap_data, inherits = FALSE)
 
   # sig: named list of gene scores, where names are HGNC symbols
   # B: number of permutations for empirical p-value testing
-  # data("cmap_es", package = "ccdata")
-  require(ccdata)
-
   query <- ccmap::query_drugs(
     sig,
     cmap_es,
@@ -54,7 +79,7 @@ get_cmap_correlations <- function(sig, B = 10000, ngenes = 200){
       names(sig)
     )
 
-    query_i <- query_drugs(
+    query_i <- ccmap::query_drugs(
       ms_i,
       cmap_es,
       sorted = FALSE,

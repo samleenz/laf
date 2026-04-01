@@ -11,8 +11,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
     BiocSingular,
-    ccdata,
-    ccmap,
     checkmate,
     circlize,
     ComplexHeatmap,
@@ -35,6 +33,9 @@ Imports:
     tibble,
     tidyr,
     viridis
+Suggests:
+    ccdata,
+    ccmap
 Depends: 
     R (>= 3.5)
 LazyData: true
