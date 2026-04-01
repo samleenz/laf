@@ -9,7 +9,7 @@
 #' @return A named list containing GSEA results for each gene set.
 #'
 #' @importFrom edgeR topTags
-#' @importFrom dplyr mutate group_by slice_max ungroup select arrange
+#' @importFrom dplyr mutate filter group_by slice_max ungroup select arrange
 #' @importFrom tibble deframe
 #' @importFrom purrr map
 #' @importFrom fgsea fgsea
@@ -28,6 +28,7 @@ gsea_gene_score <- function(res, genesets){
     as.data.frame() |>
     dplyr::mutate(stat = sign(logFC) * -log10(FDR)) |>
     dplyr::mutate(absstat = abs(stat)) |>
+    dplyr::filter(!is.na(gene_name)) |>
     dplyr::group_by(gene_name) |>
     dplyr::slice_max(absstat, n = 1) |>
     dplyr::ungroup() |>
