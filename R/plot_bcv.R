@@ -3,7 +3,7 @@
 #' @param y A DGEList object.
 #' @param logCPM_cutoff A numeric value specifying the minimum average log-CPM required for a gene to be plotted.
 #' @param BCV_cutoff A numeric value specifying the minimum biological coefficient of variation required for a gene to be plotted.
-#' @param main A character string for the plot title. (defaults to BCV value)
+#' @param main_title A character string for the plot title. (defaults to BCV value)
 #'
 #' @examples
 #' #library(edgeR)

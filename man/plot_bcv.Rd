@@ -13,7 +13,7 @@ plot_bcv(y, logCPM_cutoff = 2, BCV_cutoff = 0.7, main_title = NULL)
 
 \item{BCV_cutoff}{A numeric value specifying the minimum biological coefficient of variation required for a gene to be plotted.}
 
-\item{main}{A character string for the plot title. (defaults to BCV value)}
+\item{main_title}{A character string for the plot title. (defaults to BCV value)}
 }
 \description{
 Plot BCV versus average log counts per million (log-CPM) for genes in DGEList object

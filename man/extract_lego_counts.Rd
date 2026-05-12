@@ -8,6 +8,8 @@ extract_lego_counts(sce, altexp = "Antibody Capture")
 }
 \arguments{
 \item{sce}{A SingleCellExperiment with legotek feature counts.}
+
+\item{altexp}{The name of the altExp containing the lego counts. Default is "Antibody Capture".}
 }
 \value{
 Modified SingleCellExperiment with lego counts aggregated and stored as an altExp("lego").

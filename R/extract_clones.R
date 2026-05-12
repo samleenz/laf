@@ -1,6 +1,7 @@
 #' Extract lego (feature barcode) counts from a SingleCellExperiment
 #'
 #' @param sce A SingleCellExperiment with legotek feature counts.
+#' @param altexp The name of the altExp containing the lego counts. Default is "Antibody Capture".
 #' @return Modified SingleCellExperiment with lego counts aggregated and stored as an altExp("lego").
 #' @details Assumes "Antibody Capture" is the name of the lego altExp.
 #' @export
