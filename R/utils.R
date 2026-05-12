@@ -24,17 +24,21 @@ cd_2_df <- function(se){
 #' Convert SE object to gene-names from ENSG IDs
 #'
 #' @param se summarised object object
+#' @param gene_name column in `rowData(se)` containing gene names to use as
+#'   rownames
 #'
 #' @return se, with features in the hgnc gene_name space without duplicates
 #' @export
 #'
-se_2_hgnc <- function(se){
-  se <- se[!is.na(SummarizedExperiment::rowData(se)$gene_name), ]
+se_2_hgnc <- function(se, gene_name = "gene_name"){
+  gene_names <- SummarizedExperiment::rowData(se)[[gene_name]]
+  se <- se[!is.na(gene_names), ]
 
-  se <- se[! duplicated(SummarizedExperiment::rowData(se)$gene_name), ]
+  gene_names <- SummarizedExperiment::rowData(se)[[gene_name]]
+  se <- se[! duplicated(gene_names), ]
 
   SummarizedExperiment::rowData(se)$ensg <- rownames(se)
-  rownames(se) <- SummarizedExperiment::rowData(se)$gene_name
+  rownames(se) <- SummarizedExperiment::rowData(se)[[gene_name]]
 
   se
 }

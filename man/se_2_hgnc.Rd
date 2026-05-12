@@ -4,10 +4,13 @@
 \alias{se_2_hgnc}
 \title{Convert SE object to gene-names from ENSG IDs}
 \usage{
-se_2_hgnc(se)
+se_2_hgnc(se, gene_name = "gene_name")
 }
 \arguments{
 \item{se}{summarised object object}
+
+\item{gene_name}{column in \code{rowData(se)} containing gene names to use as
+rownames}
 }
 \value{
 se, with features in the hgnc gene_name space without duplicates
