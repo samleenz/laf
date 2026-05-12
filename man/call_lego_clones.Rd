@@ -15,9 +15,14 @@ call_lego_clones(
 \arguments{
 \item{sce}{SingleCellExperiment object}
 
-\item{min_count}{min number of counts to be considered expressed}
+\item{min_count}{min number of counts to be considered expressed. Either a
+single value used for all barcodes, or a length five vector matching the
+LeGO barcode order. The order for this and the min_frac parameter is
+Katushka, Tomato, Venus, Sapphire, eBFP2.}
 
-\item{min_frac}{min fraction of total lego counts (relative to all in the cell) for a tag to be considered expressed}
+\item{min_frac}{min fraction of total lego counts (relative to all in the
+cell) for a tag to be considered expressed. Either a single value used for
+all barcodes, or a length five vector matching the LeGO barcode order.}
 
 \item{i}{the assay of the altExp to use}
 
@@ -27,5 +32,5 @@ call_lego_clones(
 a character vector of length \code{ncol(sce)} with clone assignments
 }
 \description{
-Convert legotek sequencing counts into clone identities via thresholding
+Convert legotek BSVTK sequencing counts into clone identities via thresholding.
 }
