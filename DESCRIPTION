@@ -1,10 +1,10 @@
 Package: laf
-Title: Analysis functions for the RNA-seq analysis of LeGo barcoded clones
+Title: Analysis functions for the RNA-seq analysis of LeGO barcoded clones
 Version: 0.1.1
 Authors@R: 
     person("Samuel", "Lee", , "samleenz@me.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           comment = c(ORCID = "0000-0002-6805-4051"))
+Description: Convenience functions for bulk and single-cell RNA-seq, with a side of tools LeGOteknik barcode analysis. Not all functions are created equal, read the source code use at your own risk.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
