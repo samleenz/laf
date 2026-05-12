@@ -32,8 +32,10 @@ extract_lego_counts <- function(sce, altexp = "Antibody Capture"){
   )
   SummarizedExperiment::colData(lego_sce) <- SummarizedExperiment::colData(sce)
 
-  SingleCellExperiment::altExp(sce, "Antibody Capture") <- lego_sce
-  SingleCellExperiment::altExpNames(sce) <- "lego"
+  SingleCellExperiment::altExp(sce, altexp) <- lego_sce
+  altexp_names <- SingleCellExperiment::altExpNames(sce)
+  altexp_names[altexp_names == altexp] <- "lego"
+  SingleCellExperiment::altExpNames(sce) <- altexp_names
 
   sce
 }
