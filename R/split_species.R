@@ -1,6 +1,6 @@
 #' Split a SingleCellExperiment into human and mouse features. 
 #' 
-#' Assumes the ID symbols are the desired rownames
+#' @details Assumes the ID symbols are the desired rownames
 #'
 #'
 #' @param sce A SingleCellExperiment with `rowData` columns `ID` and `Symbol`
@@ -8,6 +8,7 @@
 #'
 #' @return A SingleCellExperiment with a `Species` rowData column, prefix-stripped
 #'   `ID`/`Symbol`/rownames, human (main) and mouse (altExp) features split
+#' @export
 split_species <- function(sce){
   rowData(sce)$Species <- dplyr::case_when(
     str_starts(rowData(sce)$ID, "GRCh38") ~ "Human",
