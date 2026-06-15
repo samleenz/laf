@@ -15,5 +15,8 @@ A SingleCellExperiment with a \code{Species} rowData column, prefix-stripped
 \code{ID}/\code{Symbol}/rownames, human (main) and mouse (altExp) features split
 }
 \description{
+Split a SingleCellExperiment into human and mouse features.
+}
+\details{
 Assumes the ID symbols are the desired rownames
 }
